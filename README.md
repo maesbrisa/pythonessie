@@ -1,10 +1,11 @@
-## pythonessie
+pythonessie
+================
+
 Algorithms implemented in Python 3
 
-´´´ bash
+``` bash
 $ python3 connect_scan.py <ip> <ports>
-´´´
-
-´´´ bash
+```
+``` bash
 $ python3 stealth_scan.py <ip> <ports>
-´´´
+```
