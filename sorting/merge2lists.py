@@ -1,6 +1,6 @@
 
 def mergeboth(a, b):
-    ia, ib, ic = 0,0,0
+    ia, ib = 0,0
     length = len(a) + len(b)
     c = []
     if len(a) == 0:
