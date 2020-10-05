@@ -1,6 +1,6 @@
 
 def mergeboth(a, b):
-    ia, ib = 0,0
+    index = 0
     length = len(a) + len(b)
     c = []
     if len(a) == 0:
@@ -14,43 +14,42 @@ def mergeboth(a, b):
         print('------------------------')
         return a
     while len(c) < length-1:
-        if a[ia] <= b[ib]:
-            print(str(a[ia]) + ' minor than ' + str(b[ib]))
-            if len(c) > 1 and a[ia] < c[-1]:
-                c.insert(-1, a[ia])
+        if a[index] <= b[index]:
+            print(str(a[index]) + ' minor than ' + str(b[index]))
+            if len(c) > 1 and a[index] < c[-1]:
+                c.insert(-1, a[index])
             else:
-                c.append(a[ia])
-            c.append(b[ib])
+                c.append(a[index])
+            c.append(b[index])
             print('Current C array')
             print(c)
         else:
-            print(str(a[ia]) + ' major than ' + str(b[ib]))
-            if len(c) > 1 and b[ib] < c[-1]:
-                c.insert(-1, b[ib])
+            print(str(a[index]) + ' major than ' + str(b[index]))
+            if len(c) > 1 and b[index] < c[-1]:
+                c.insert(-1, b[index])
             else:
-                c.append(b[ib])
-            c.append(a[ia])
+                c.append(b[index])
+            c.append(a[index])
             print('Current C array')
             print(c)
-        if ia == len(a) -1:
-            if ib < len(b)-1:
-                print('there are elements left from: ' + str(ib) )
-                print('elements left from ' + str(ib))
-                print(b[ib+1:])
-                c.extend(b[ib+1:])
+        if index == len(a) -1:
+            if index < len(b)-1:
+                print('there are elements left from: ' + str(index) )
+                print('elements left from ' + str(index))
+                print(b[index+1:])
+                c.extend(b[index+1:])
                 print('Check lengths')
                 print(length, len(c))
         else:
-            if ib == len(b)-1:
-                print('there are elements left from: ' + str(ia) )
-                print('elements left from ' + str(ia))
-                print(a[ia+1:])
-                c.extend(a[ia+1:])
+            if index == len(b)-1:
+                print('there are elements left from: ' + str(index) )
+                print('elements left from ' + str(index))
+                print(a[index+1:])
+                c.extend(a[index+1:])
                 print('Check lengths')
                 print(length, len(c))
             else:
-                ia += 1
-                ib += 1
+                index += 1
     print('----- Final result -----')
     print(c)
     print('------------------------')
